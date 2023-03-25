@@ -3,6 +3,7 @@ import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import HeroSection from './components/HeroSection.js'
 import Products from './components/Products.js'
+import ProductDetailPage from './components/ProductDetailPage.js'
 import Product from './components/Product.js'
 import ShoppingList from './components/ShoppingList.js'
 import Menu from './components/Menu.js'
@@ -18,7 +19,20 @@ const productsData = [
 ];
 
 function App() {
-  
+  const exchangeRate = 27; // курс долара до гривні
+  const product = {
+    title: 'Product Name',
+    description: 'This is a description of the product.',
+    price: 500, // в гривнях
+  };
+  const convertCurrency = (amount) => {
+    return (amount / exchangeRate).toFixed(2); // конвертуємо гривні в долари
+  };
+
+  const productInDollars = {
+    ...product,
+    price: convertCurrency(product.price),
+  };
     const products = [
       { id: 1, name: 'Product 1', category: 'Category 1' },
       { id: 2, name: 'Product 2', category: 'Category 2' },
@@ -73,6 +87,11 @@ function App() {
         <Menu></Menu>
         <HeroSection></HeroSection>
         <Products></Products>
+        <ProductDetailPage
+        title={product.title}
+        description={product.description}
+        product={productInDollars}
+      />
 
         <h1>Shopping List</h1>
         <div>
