@@ -1,5 +1,5 @@
 import { useStatus, useLogger, useToggle } from "../components/MyHooks.js";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function MyComponent() {
   const [status, setStatus] = useStatus("ready");

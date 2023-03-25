@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from '../img/logo.svg';
+import { Link } from 'react-router-dom';
 import '../css/Header.css'
 class Header extends Component {
   render(selectedItemsCount) {
@@ -10,10 +11,12 @@ class Header extends Component {
           <img src={logo}  />
           <p>You have selected {selectedItemsCount} items.</p>
         </div>
+        <Link to="/about">Home</Link>
         <nav className="nav">
           <ul className="nav-list">
             <li className="nav-item">
-              <a href="#">Home</a>
+              
+              {/* <a href="#">Home</a> */}
             </li>
             <li className="nav-item">
               <a href="#">Shop</a>

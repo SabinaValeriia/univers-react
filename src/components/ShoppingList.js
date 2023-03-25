@@ -1,5 +1,5 @@
 import ShoppingListItem from "../components/ShopingListItem"
-
+import React from 'react'
   
 function ShoppingList(props) {
     const { items, onItemSelected } = props;

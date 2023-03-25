@@ -1,3 +1,4 @@
+import React from 'react'
 function ShoppingListItem(props) {
   const { item, onItemSelected } = props;
 
