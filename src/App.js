@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header.js'
 import Footer from './components/Footer.js'
 import HeroSection from './components/HeroSection.js'
+import HooksComponent from './components/HooksComponent.js'
 import Products from './components/Products.js'
 import ProductDetailPage from './components/ProductDetailPage.js'
 import Product from './components/Product.js'
@@ -125,6 +126,7 @@ function App() {
             </div>
           ))}
         </main>
+        <HooksComponent></HooksComponent>
         <Footer></Footer>
       </div>
 
