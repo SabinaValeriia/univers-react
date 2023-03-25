@@ -1,30 +1,28 @@
 import React, { Component } from "react";
 import logo from '../img/logo.svg';
-import { Link } from 'react-router-dom';
-import '../css/Header.css'
+// import { Link } from 'react-router-dom';
+import styles from '../css/Header.module.css'
 class Header extends Component {
   render(selectedItemsCount) {
     return (
         /* eslint-disable */
-      <header className="header">
-        <div className="logo">
+      <header className={styles.header}>
+        <div className={styles['logo']}>
           <img src={logo}  />
           <p>You have selected {selectedItemsCount} items.</p>
         </div>
-        <Link to="/about">Home</Link>
-        <nav className="nav">
-          <ul className="nav-list">
-            <li className="nav-item">
-              
-              {/* <a href="#">Home</a> */}
+        <nav className={styles['nav']}>
+          <ul className={styles['nav-list']}>
+            <li className={styles['nav-item']}>
+              <a href="#">Home</a>
             </li>
-            <li className="nav-item">
+            <li className={styles['nav-item']}>
               <a href="#">Shop</a>
             </li>
-            <li className="nav-item">
+            <li className={styles['nav-item']}>
               <a href="#">About</a>
             </li>
-            <li className="nav-item">
+            <li className={styles['nav-item']}>
               <a href="#">Contact</a>
             </li>
           </ul>

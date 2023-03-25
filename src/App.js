@@ -14,6 +14,9 @@ import { useState } from "react";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Routes} from 'react-router-dom';
 import { createContext, useContext } from "react";
+import Dialog from "./components/Dialog";
+import Animation from "./components/Animation";
+import SecondaryButton from "./components/SecondaryButton"
 /* eslint-disable */
 const productsData = [
   { id: 1, name: "Product 1", price: 10 },
@@ -104,11 +107,11 @@ function App() {
       <ShoppingList items={shoppingList} onItemSelected={handleItemSelected} />
       <Menu></Menu>
       <HeroSection></HeroSection>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route component={Products} />
         </Routes>
-    </BrowserRouter>
+    </BrowserRouter> */}
       <ProductDetailPage
         title={product.title}
         description={product.description}
@@ -166,6 +169,9 @@ function App() {
           </LanguageContext.Provider>
         </UserContext.Provider>
       </div>
+      <Dialog></Dialog>
+      <Animation></Animation>
+      <SecondaryButton></SecondaryButton>
       <Footer></Footer>
     </div>
   );
