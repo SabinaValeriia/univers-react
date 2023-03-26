@@ -17,6 +17,13 @@ import { createContext, useContext } from "react";
 import Dialog from "./components/Dialog";
 import Animation from "./components/Animation";
 import SecondaryButton from "./components/SecondaryButton"
+import AdminPage from "./components/AdminPage"
+import AuthModal from "./components/AuthModal"
+
+import ImageUpload from "./components/ImageUpload";
+import CustomButton from "./components/CustomButton";
+import NewProductForm from "./components/NewProductForm"
+import TableComponent from "./components/TableComponent";
 /* eslint-disable */
 const productsData = [
   { id: 1, name: "Product 1", price: 10 },
@@ -25,7 +32,13 @@ const productsData = [
 ];
 
 const UserContext = createContext();
+const handleEdit = (record) => {
+  // код для редагування запису
+};
 
+const handleDelete = (id) => {
+  // код для видалення запису з ідентифікатором id
+};
 
 const LanguageContext = createContext();
 
@@ -172,6 +185,12 @@ function App() {
       <Dialog></Dialog>
       <Animation></Animation>
       <SecondaryButton></SecondaryButton>
+      <AdminPage></AdminPage>
+      <AuthModal></AuthModal>
+      <NewProductForm></NewProductForm>
+      <ImageUpload></ImageUpload>
+      <CustomButton></CustomButton>
+      <TableComponent  />
       <Footer></Footer>
     </div>
   );
