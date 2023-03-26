@@ -24,6 +24,9 @@ import ImageUpload from "./components/ImageUpload";
 import CustomButton from "./components/CustomButton";
 import NewProductForm from "./components/NewProductForm"
 import TableComponent from "./components/TableComponent";
+import Login from "./components/Login";
+import SignupForm from "./components/SignupForm";
+import NumberForm from "./components/NumberForm";
 /* eslint-disable */
 const productsData = [
   { id: 1, name: "Product 1", price: 10 },
@@ -191,6 +194,9 @@ function App() {
       <ImageUpload></ImageUpload>
       <CustomButton></CustomButton>
       <TableComponent  />
+      <Login></Login>
+      <SignupForm></SignupForm>
+      <NumberForm></NumberForm>
       <Footer></Footer>
     </div>
   );
