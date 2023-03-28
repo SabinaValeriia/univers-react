@@ -19,8 +19,10 @@ import Animation from "./components/Animation";
 import SecondaryButton from "./components/SecondaryButton"
 import AdminPage from "./components/AdminPage"
 import AuthModal from "./components/AuthModal"
-
+import ProductList from "./components/ProductList"
 import ImageUpload from "./components/ImageUpload";
+import { Provider } from "react-redux";
+import store from "./store";
 import CustomButton from "./components/CustomButton";
 import NewProductForm from "./components/NewProductForm"
 import TableComponent from "./components/TableComponent";
@@ -197,6 +199,12 @@ function App() {
       <Login></Login>
       <SignupForm></SignupForm>
       <NumberForm></NumberForm>
+      <Provider store={store}>
+      <div className="App">
+        <ProductList />
+      </div>
+    </Provider>
+  
       <Footer></Footer>
     </div>
   );
