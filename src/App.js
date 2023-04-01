@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import Film from "./components/Film.js";
 import HeroSection from "./components/HeroSection.js";
 import HooksComponent from "./components/HooksComponent.js";
 import Products from "./components/Products.js";
@@ -12,19 +13,20 @@ import LoginButton from "./components/LoginButton";
 import LogoutButton from "./components/LogoutButton";
 import { useState } from "react";
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Routes } from "react-router-dom";
 import { createContext, useContext } from "react";
 import Dialog from "./components/Dialog";
 import Animation from "./components/Animation";
-import SecondaryButton from "./components/SecondaryButton"
-import AdminPage from "./components/AdminPage"
-import AuthModal from "./components/AuthModal"
-import ProductList from "./components/ProductList"
+import SecondaryButton from "./components/SecondaryButton";
+import AdminPage from "./components/AdminPage";
+import AuthModal from "./components/AuthModal";
+import ProductList from "./components/ProductList";
 import ImageUpload from "./components/ImageUpload";
 import { Provider } from "react-redux";
 import store from "./store";
 import CustomButton from "./components/CustomButton";
-import NewProductForm from "./components/NewProductForm"
+import User from "./components/User";
+import NewProductForm from "./components/NewProductForm";
 import TableComponent from "./components/TableComponent";
 import Login from "./components/Login";
 import SignupForm from "./components/SignupForm";
@@ -47,15 +49,13 @@ const handleDelete = (id) => {
 
 const LanguageContext = createContext();
 
-
 function UserName() {
-  const { name } = useContext(UserContext); 
+  const { name } = useContext(UserContext);
   return <p>Name: {name}</p>;
 }
 
-
 function Language() {
-  const { language } = useContext(LanguageContext); 
+  const { language } = useContext(LanguageContext);
   return <p>Language: {language}</p>;
 }
 
@@ -195,16 +195,16 @@ function App() {
       <NewProductForm></NewProductForm>
       <ImageUpload></ImageUpload>
       <CustomButton></CustomButton>
-      <TableComponent  />
+      <TableComponent />
       <Login></Login>
       <SignupForm></SignupForm>
       <NumberForm></NumberForm>
       <Provider store={store}>
-      <div className="App">
-        <ProductList />
-      </div>
-    </Provider>
-  
+        <div className="App">
+          <ProductList />
+        </div>
+      </Provider>
+      <Film></Film>
       <Footer></Footer>
     </div>
   );
