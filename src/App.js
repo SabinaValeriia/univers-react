@@ -1,7 +1,9 @@
 import "./App.css";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
+import Todos from "./components/Todos.js";
 import Film from "./components/Film.js";
+import { QueryClient, QueryClientProvider } from 'react-query';
 import HeroSection from "./components/HeroSection.js";
 import HooksComponent from "./components/HooksComponent.js";
 import Products from "./components/Products.js";
@@ -42,7 +44,7 @@ const UserContext = createContext();
 const handleEdit = (record) => {
   // код для редагування запису
 };
-
+const queryClient = new QueryClient();
 const handleDelete = (id) => {
   // код для видалення запису з ідентифікатором id
 };
@@ -204,7 +206,6 @@ function App() {
           <ProductList />
         </div>
       </Provider>
-      <Film></Film>
       <Footer></Footer>
     </div>
   );
